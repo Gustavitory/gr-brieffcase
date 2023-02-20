@@ -37,10 +37,10 @@ export const useNavigation = () => {
 
     const topStructure=[
         {title:'Home', action:()=>select('Home'),scroll:'Home'},
-        {title:'Acerca de mi',action:()=>select('About'),scroll:'About'},
+        {title:'About',action:()=>select('About'),scroll:'About'},
         {title:'logo',action:()=>select('Home'),scroll:'Home'},
-        {title:'Trabajos',action:()=>select('Projects'),scroll:'Projects'},
-        {title:'Contacto',action:()=>select('Contact'),scroll:'Contact'}
+        {title:'Projects',action:()=>select('Projects'),scroll:'Projects'},
+        {title:'Contact',action:()=>select('Contact'),scroll:'Contact'}
     ]
 
     return {contenedor,structure,selected,position,topStructure}

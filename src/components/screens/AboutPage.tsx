@@ -4,7 +4,7 @@ import React from 'react'
 const AboutPage = () => {
   return (
     <div id='About'>
-        <AboutMe title='Sobre mi' content='Mi nombre es José Manuel Oropeza. Soy diseñador ux/ui y diseñador grafico. Actualmente estoy trabajando de manera FreeLancer y realizando proyectos nuevos con la guía d ID For Ideas. Me apasiona crear experiencias digitales y enseñar diseño. Mi objetivo es llegar ayudar a las personas que inicien nuevas este mundo IT a desarrollar sus habilidades y fortalezas. '/>
+        <AboutMe title='About me' content="My name's Gustavo riera. I'm full stack web developer. My goal is improve every days and get skills to make the better work. Write code and teach my knowledges to others makes me happy. My goal is be the better version myself . "/>
     </div>
   )
 }

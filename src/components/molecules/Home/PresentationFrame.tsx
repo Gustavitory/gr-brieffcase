@@ -1,5 +1,6 @@
 import { GradientColorButton } from '../../atoms/buttons/GradientColorButton'
 import React from 'react'
+import { DownloadButton } from '@/components/atoms/buttons/DownloadButton'
 
 interface PresentationFrameProps{
     content:string,
@@ -14,7 +15,7 @@ export const PresentationFrame = ({contact,download,content}:PresentationFramePr
             <p>{content}</p>
             <div className='buttons'>
                 <GradientColorButton color1='--gray' color2='--gray' content='Contacto' action={contact}/>
-                <GradientColorButton color1='--pink' color2='--navy' content='Descargar CV' action={download}/>
+                <DownloadButton color1='--pink' color2='--navy' content='Descargar CV' action={download}/>
             </div>
         </div>
         <style jsx>{`
