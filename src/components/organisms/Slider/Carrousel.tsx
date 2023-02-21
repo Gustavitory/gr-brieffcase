@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import { CardSlider } from './CardSlider';
 
 interface CarrouselProps{
@@ -14,6 +14,14 @@ export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,p
   const table = pcards;
 
   const [goToSlide, setGoToSlide] = useState<number>(0);//ojo
+  useEffect(()=>{
+    autoRun();
+  },[])
+  const autoRun=setInterval(()=>{
+    goToSlide===table.length?setGoToSlide(0):setGoToSlide(goToSlide+1);
+  },3000)
+
+  const clear=()=>clearInterval(autoRun);
 
   const positionRelative=(index:number)=>{
     if(index===table.length-1 && goToSlide===0) return'before';
@@ -31,6 +39,7 @@ export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,p
     <>
       <ul
         style={{height: pheight, margin: pmargin,zIndex:10 }}
+        onMouseEnter={()=>clear()}
       >
         {
           table.map((el,ind)=>{
