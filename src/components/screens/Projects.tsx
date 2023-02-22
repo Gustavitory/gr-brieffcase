@@ -3,14 +3,17 @@ import Carroussel from "../organisms/Slider/Carrousel";
 
 function Projects() {
   let cards = [
-        {image:"/Trabajos/Card.png", title:"Páginas Web"},
-        {image:"/Trabajos/cards.png",title:"Diseño de Apps"},
-        {image:"/Trabajos/DiseñoGrafico.png", title:"Diseño Gráfico"}
+        {image:"/Trabajos/excel-microsoft.gif", title:"React CSV to JSON"},
+        {image:"/Trabajos/harry-potter-ron-weasley.gif",title:"Harry Potter App"},
+        {image:"/Trabajos/squirtle-pikachu.gif", title:"Pokemon App"},
+        {image:"/Trabajos/GradienteLogo.png", title:"Gradiente"},
+        {image:"/Trabajos/JacidiLogo.png", title:"Jacidi"},
+        {image:"/Trabajos/FonaxLogo.png", title:"Fonax"}
   ];
   return (
     <>
         <div className="cont" id="Projects">
-          <h2>Mis trabajos recientes</h2>
+          <h2>Projects</h2>
         <Carroussel
             pcards={cards}
             pheight="17em"
