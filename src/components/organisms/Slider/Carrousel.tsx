@@ -14,19 +14,19 @@ export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,p
   const table = pcards;
 
   const [goToSlide, setGoToSlide] = useState<number>(0);//ojo
-  useEffect(()=>{
-    autoRun();
-  },[])
-  const autoRun=setInterval(()=>{
-    goToSlide===table.length?setGoToSlide(0):setGoToSlide(goToSlide+1);
-  },3000)
 
-  const clear=()=>clearInterval(autoRun);
+  const middle=(ind:number)=>{
+    const indexs=table.map((el,index)=>index);
+    const top=goToSlide+(indexs.length/2)>=indexs.length?(goToSlide+(indexs.length/2))-indexs.length:goToSlide+(indexs.length/2);
+    const right=indexs.slice(goToSlide,top);
+    const left=indexs.slice(top,goToSlide);
+  }
+  
 
   const positionRelative=(index:number)=>{
+    if(index===goToSlide) return 'actual';
     if(index===table.length-1 && goToSlide===0) return'before';
     if(goToSlide===table.length-1 && index===0)return 'next';
-    if(index===goToSlide) return 'actual';
     if(index>goToSlide){
       return index-goToSlide===1?'next':'nextnext'
     }
@@ -38,8 +38,7 @@ export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,p
   return (
     <>
       <ul
-        style={{height: pheight, margin: pmargin,zIndex:10 }}
-        onMouseEnter={()=>clear()}
+        style={{height: pheight, margin: pmargin,zIndex:10 }} 
       >
         {
           table.map((el,ind)=>{
@@ -71,7 +70,7 @@ export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,p
 
         .card.actual{
           transform:translateX(-50%) scale(1);
-          z-index:10;
+          z-index:15;
           opacity:1;
         }
 
@@ -83,6 +82,10 @@ export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,p
         .card.next{
           opacity:1;
           cursor:pointer;
+          z-index:10;
+        }
+        .card.nextnext{
+          z-index:-1;
         }
       `}</style>
     </>

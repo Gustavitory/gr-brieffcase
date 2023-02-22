@@ -1,5 +1,6 @@
 import {FaGithubSquare,FaRocket} from 'react-icons/fa';
-import { createRef, useState,useEffect } from 'react';
+import { createRef} from 'react';
+import Image from 'next/image';
 
 export interface CardSliderProps{
     image:string;
@@ -10,18 +11,10 @@ export interface CardSliderProps{
 
 export const CardSlider = ({image,title,linkDeploy,linkRepo}:CardSliderProps) => {
     const imagen=createRef<HTMLDivElement>();
-    const [imageWidth,setImageWidth]=useState(100);
-    useEffect(()=>{
-        imagen.current?
-            setImageWidth(imagen.current.clientWidth)
-            :
-            null
-        console.log(imagen);
-    },[imagen])
   return (
     <>
         <div className='cont' ref={imagen}>
-            <img src={image} alt={title}/>
+            <Image width={350} height={250} src={image} alt={title}/>
             <div className='info'>
                 <p>{title}</p>
                 {
@@ -45,18 +38,20 @@ export const CardSlider = ({image,title,linkDeploy,linkRepo}:CardSliderProps) =>
             .cont{
                 position:relative;
                 width:100%;
-                height:100%;
+                height:fit-content;;
                 max-width:23em;
+                border-radius:2em;
+                overflow:hidden;
             }
             .cont .info{
                 position:absolute; 
-                bottom:0;
+                bottom:7px;
                 width:100%;
                 display:flex;
                 flex-direction:column;
                 align-items:center;
                 // justify-content:center;
-                background:#00000030;
+                background:#00000050;
                 padding:.5em 0;
                 border-radius:0 0 1em 1em;
             }
