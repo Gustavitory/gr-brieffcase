@@ -17,18 +17,10 @@ export const CardSlider = ({image,title,linkDeploy,linkRepo}:CardSliderProps) =>
             <Image width={350} height={250} src={image} alt={title}/>
             <div className='info'>
                 <p>{title}</p>
-                {
-                    linkRepo && linkDeploy?
-                        <div className='Links'>
-                            <a href={linkRepo} target={'_blank'} rel="noreferrer"><FaGithubSquare/></a>
-                            <a href={linkDeploy} target={'_blank'} rel="noreferrer"><FaRocket/></a>
-                        </div>:
-                        linkRepo?
-                        <div className='Links'>
-                            <a href={linkRepo} target={'_blank'} rel="noreferrer"><FaGithubSquare/></a>
-                        </div>:
-                        null
-                }
+                <div className='links'>
+                    <a href={linkRepo} target='_blank' rel="noreferrer"><FaGithubSquare/></a>
+                    <a href={linkDeploy} target='_blank' rel="noreferrer"><FaRocket/></a>
+                </div>
             </div>
         </div>
         <style jsx>{`
@@ -55,9 +47,24 @@ export const CardSlider = ({image,title,linkDeploy,linkRepo}:CardSliderProps) =>
                 padding:.5em 0;
                 border-radius:0 0 1em 1em;
             }
-            .cont .info .Links{
+            .cont .info .links{
                 display:flex;
                 gap:2em;
+                font-size:1em;
+                z-index:10000;
+            }
+            .cont .info .links a{
+                cursor:pointer;
+                transition:.25s;
+                background:var(--primary-color);
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                padding:.5em;
+                border-radius:.5em;
+            }
+            .cont .info .links a:hover{
+                transform:scale(1.1) translateY(-2px);
             }
         `}</style>
     </>

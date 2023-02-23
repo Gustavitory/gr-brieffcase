@@ -7,10 +7,10 @@ export const ContactForm = () => {
     <>
         <div>
             <ContactMonolog title='Ponerse en contacto' 
-            content='Soy muy accesible y me encantaría hablar contigo. No dude en llamar, enviarme un correo electrónico. 
-            Sígueme en las redes sociales o simplemente completa el formulario de consulta.'
-            cell='+58 412 892-4895'
-            email='jmoropeza1997@gmail.com'
+            content="I'ld like to talk with you! Feel free to call, email me. 
+            Follow me on social networks or simply fill out the contact form."
+            cell='+58 424 3467694'
+            email='ggrieraya@gmail.com'
              />
              <ContactFormCamps/>
         </div>
