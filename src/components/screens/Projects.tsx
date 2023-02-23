@@ -3,12 +3,13 @@ import Carroussel from "../organisms/Slider/Carrousel";
 
 function Projects() {
   let cards = [
-        {image:"/Trabajos/excel-microsoft.gif", title:"React CSV to JSON"},
-        {image:"/Trabajos/harry-potter-ron-weasley.gif",title:"Harry Potter App"},
-        {image:"/Trabajos/squirtle-pikachu.gif", title:"Pokemon App"},
-        {image:"/Trabajos/GradienteLogo.png", title:"Gradiente"},
-        {image:"/Trabajos/JacidiLogo.png", title:"Jacidi"},
-        {image:"/Trabajos/FonaxLogo.png", title:"Fonax"}
+        {image:"/Trabajos/excel-microsoft.gif", title:"React CSV to JSON",linkDeploy:"https://react-test-np5ub7ect-gustavitory.vercel.app",linkRepo:"https://github.com/Gustavitory/ReactTestApp"},
+        {image:"/Trabajos/harry-potter-ron-weasley.gif",title:"Harry Potter App",linkDeploy:'https://hp-app.vercel.app/',linkRepo:"https://github.com/Gustavitory/hp-app"},
+        {image:"/Trabajos/squirtle-pikachu.gif", title:"Pokemon App",linkDeploy:'https://sad-bardeen-717db3.netlify.app/',linkRepo:"https://github.com/Gustavitory/PokemonChallenge"},
+        {image:"/Trabajos/GradienteLogo.png", title:"Gradiente",linkDeploy:'https://gradiente.ai',linkRepo:""},
+        {image:"/Trabajos/JacidiLogo.png", title:"Jacidi",linkDeploy:'https://www.jacidi.com',linkRepo:""},
+        {image:"/Trabajos/FonaxLogo.png", title:"Fonax",linkDeploy:'http://www.fonax.com/web/',linkRepo:""},
+        {image:"/Trabajos/this.gif", title:"This",linkDeploy:'#',linkRepo:"https://github.com/Gustavitory/gr-brieffcase"}
   ];
   return (
     <>
@@ -17,10 +18,7 @@ function Projects() {
         <Carroussel
             pcards={cards}
             pheight="17em"
-            pwidth="45%"
             pmargin="0 0"
-            poffset={2}
-            pshowArrows={false}
         />
         <img src="/Trabajos/Background.png" alt="bg" />
         </div>

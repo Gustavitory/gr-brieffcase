@@ -1,28 +1,15 @@
 import { useState, useEffect } from 'react';
-import { CardSlider } from './CardSlider';
+import { CardSlider, CardSliderProps } from './CardSlider';
 
 interface CarrouselProps{
-    pcards:any[];
-        poffset:number;
-        pshowArrows:boolean;
-        pwidth:string;
-        pheight:string;
-        pmargin:string;
+    pcards:CardSliderProps[];
+    pheight:string;
+    pmargin:string;
 }
 
-export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,pwidth}:CarrouselProps) {
+export default function Carroussel({pcards,pheight,pmargin}:CarrouselProps) {
   const table = pcards;
-
   const [goToSlide, setGoToSlide] = useState<number>(0);//ojo
-
-  const middle=(ind:number)=>{
-    const indexs=table.map((el,index)=>index);
-    const top=goToSlide+(indexs.length/2)>=indexs.length?(goToSlide+(indexs.length/2))-indexs.length:goToSlide+(indexs.length/2);
-    const right=indexs.slice(goToSlide,top);
-    const left=indexs.slice(top,goToSlide);
-  }
-  
-
   const positionRelative=(index:number)=>{
     if(index===goToSlide) return 'actual';
     if(index===table.length-1 && goToSlide===0) return'before';
@@ -42,10 +29,10 @@ export default function Carroussel({pcards,pheight,pmargin,poffset,pshowArrows,p
       >
         {
           table.map((el,ind)=>{
-            const {image,title}=el;
+            const {image,title,linkDeploy,linkRepo}=el;
             return (
               <li key={ind} onClick={()=>{setGoToSlide(ind)}} className={`card ${positionRelative(ind)}`}>
-                <CardSlider image={image} title={title} />
+                <CardSlider image={image} title={title} linkDeploy={linkDeploy} linkRepo={linkRepo} />
               </li>
             )
           })
