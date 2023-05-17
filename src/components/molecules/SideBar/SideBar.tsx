@@ -48,18 +48,6 @@ export const SideBar = ({config}:SideBarProps) => {
                 top:50%;
                 transform:translateY(-50%);
             }
-            ul::before{
-                position:absolute;
-                content:'';
-                width:5em;
-                height:5em;
-                background:#12121230;
-                top:${position}px;
-                right:0;
-                transform:rotate(45deg) translateX(70%);
-                border-radius:0 0 0 1em;
-                transition:1s;
-            }
         `}</style>
     </>
   )

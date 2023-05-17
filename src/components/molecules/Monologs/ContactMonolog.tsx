@@ -1,6 +1,7 @@
 import React from 'react'
 import {IoMdCall,IoMdMail} from 'react-icons/io';
 import Image from 'next/image';
+import { SocialFooter } from '../Footer/SocialFooter';
 
 interface contacMonologProps{
   title:string;
@@ -35,6 +36,7 @@ export const ContactMonolog = ({title,content,cell,email}:contacMonologProps) =>
               </div>
               <p>{email}</p>
             </div>
+            <SocialFooter/>
         </div>
         <style jsx>{`
           .cont{

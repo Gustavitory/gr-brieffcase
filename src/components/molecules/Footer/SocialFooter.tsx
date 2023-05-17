@@ -32,7 +32,7 @@ export const SocialFooter = () => {
                 gap:3em;
                 position:relative;
                 z-index:10;
-                margin-top:3em;
+                margin-top:1em;
             }
         `}</style>
     </>
