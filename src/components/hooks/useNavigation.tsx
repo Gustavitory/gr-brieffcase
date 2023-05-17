@@ -7,6 +7,21 @@ export const useNavigation = () => {
     const [position,setPos]=useState(0);
     const contenedor=createRef<HTMLUListElement>();
     
+    const structure=[
+        {Icon:IoMdHome,name:'Home',action:()=>select('Home'),scroll:'Home'},
+        {Icon:IoMdPerson,name:'About',action:()=>select('About'),scroll:'About'},
+        {Icon:IoMdBriefcase,name:'Projects',action:()=>select('Projects'),scroll:'Projects'},
+        {Icon:IoMdCall,name:'Contact',action:()=>select('Contact'),scroll:'Contact'},
+        {Icon:IoMdSearch,name:'Search',action:()=>select('Search'),scroll:'Search'},
+    ]
+
+    const topStructure=[
+        {title:'Home', action:()=>select('Home'),scroll:'Home'},
+        {title:'About',action:()=>select('About'),scroll:'About'},
+        {title:'logo',action:()=>select('Home'),scroll:'Home'},
+        {title:'Projects',action:()=>select('Projects'),scroll:'Projects'},
+        {title:'Contact',action:()=>select('Contact'),scroll:'Contact'}
+    ]
     const select=(name:string)=>{
         let index=structure.map((el)=>el.name).indexOf(name);
         if (contenedor.current){
@@ -27,21 +42,6 @@ export const useNavigation = () => {
         select('Home');
     },[])
     
-    const structure=[
-        {Icon:IoMdHome,name:'Home',action:()=>select('Home'),scroll:'Home'},
-        {Icon:IoMdPerson,name:'About',action:()=>select('About'),scroll:'About'},
-        {Icon:IoMdBriefcase,name:'Projects',action:()=>select('Projects'),scroll:'Projects'},
-        {Icon:IoMdCall,name:'Contact',action:()=>select('Contact'),scroll:'Contact'},
-        {Icon:IoMdSearch,name:'Search',action:()=>select('Search'),scroll:'Search'},
-    ]
 
-    const topStructure=[
-        {title:'Home', action:()=>select('Home'),scroll:'Home'},
-        {title:'About',action:()=>select('About'),scroll:'About'},
-        {title:'logo',action:()=>select('Home'),scroll:'Home'},
-        {title:'Projects',action:()=>select('Projects'),scroll:'Projects'},
-        {title:'Contact',action:()=>select('Contact'),scroll:'Contact'}
-    ]
-
-    return {contenedor,structure,selected,position,topStructure}
+    return {contenedor,structure,selected,position,topStructure,setSelected}
 }

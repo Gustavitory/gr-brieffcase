@@ -7,8 +7,7 @@ export const ContactForm = () => {
     <>
         <div>
             <ContactMonolog title='Ponerse en contacto' 
-            content="I'ld like to talk with you! Feel free to call, email me. 
-            Follow me on social networks or simply fill out the contact form."
+            content="Me gustaria hablar contigo! sientete libre de contactarme via whatsapp o email, tambien puedes contactarme mediante las redes sociales o simplemente rellenando este formulario con tu informacion de contacto y en la brevedad me comunicare contigo."
             cell='+58 424 3467694'
             email='ggrieraya@gmail.com'
              />

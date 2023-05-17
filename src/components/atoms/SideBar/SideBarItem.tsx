@@ -10,7 +10,7 @@ export interface SideBarItemProps{
 export const SideBarItem = ({selected,Icon,action,name}:SideBarItemProps) => {
   return (
     <>
-        <Icon className={`sideBarItem${selected===name?' selected':''}`} onClick={()=>action()}/>
+        <Icon className={`sideBarItem`} onClick={()=>action()}/>
         <style jsx>{`
           .sideBarItem{
             font-size:26px;
@@ -22,7 +22,7 @@ export const SideBarItem = ({selected,Icon,action,name}:SideBarItemProps) => {
             color:white;
           }
           .sideBarItem:hover{
-            filter:brightness(1.8);
+            color:white;
         }
         `}</style>
     </>

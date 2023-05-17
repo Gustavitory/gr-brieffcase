@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 interface AboutMe{
@@ -9,7 +10,12 @@ export const AboutMe = ({title,content}:AboutMe) => {
   return (
     <>
         <div className='allCont'>
-            <img src="/About/AboutImage.png" alt="aboutIMG" />
+            <Image style={{
+        position:'absolute',
+        top:0,
+        left:'50%',
+        transform:'translateX(-50%)'
+    }} src="/About/AboutImage.png" alt="aboutIMG" width={900} height={900} />
             <div className='cont'>
                 <p className='title'>{title}</p>
                 <p className='content'>{content}</p>
@@ -20,26 +26,20 @@ export const AboutMe = ({title,content}:AboutMe) => {
                 position:relative;
                 height:100vh;
             }
-            img{
-                width:45em;
-                position:absolute;
-                top:0;
-                left:50%;
-                transform:translateX(-50%);
-            }
             .cont{
-                width:11em;
+                width:13em;
                 position:absolute;
-                left:50%;
+                left:51%;
                 top:50%;
                 transform:translateY(-50%) translateX(-20%);
             }
             .title{
-                font-size:.8em;
+                font-size:1em;
+                font-weight:900;
             }
             .content{
                 font-weight:400;
-                font-size:.6em;
+                font-size:.7em;
             }
 
         `}</style>
