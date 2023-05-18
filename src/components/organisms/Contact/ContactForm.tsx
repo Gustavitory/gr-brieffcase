@@ -26,6 +26,11 @@ export const ContactForm = () => {
                 backdrop-filter:blur(7px);
                 z-index:10;
             }
+            @media(max-width:1000px){
+              div{
+                width:70%;
+              }
+            }
         `}</style>
     </>
   )

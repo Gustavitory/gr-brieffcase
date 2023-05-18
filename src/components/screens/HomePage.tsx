@@ -38,6 +38,15 @@ const HomePage = () => {
                 top:0;
                 left:0;
             }
+            @media(max-width:1000px){
+                img{
+                    width:350px;
+                }
+                img.bot{
+                    top:100%;
+                    transform: translateY(-100%);
+                }
+            }
         `}</style>
     </>
   )

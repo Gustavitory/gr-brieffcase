@@ -34,6 +34,14 @@ export const PresentationFrame = ({contact,download,content}:PresentationFramePr
                 justify-content:center;
                 gap:2em;
             }
+            @media (max-width:1000px){
+                .content{
+                    transform:none;
+                }
+                .content p{
+                    font-size:45px;
+                }
+            }
         `}</style>
     </>
   )

@@ -53,6 +53,17 @@ export const NavBar = ({data}:NavBarProps) => {
             img{
                 cursor:pointer;
             }
+            @media (max-width:1000px){
+                ul{
+                    gap:1em;
+                    width:100%;
+                    padding:0 1em;
+                    font-size:.7em;
+                }
+                ul img{
+                    width:70px;
+                }
+            }
         `}</style>
     </>
   )

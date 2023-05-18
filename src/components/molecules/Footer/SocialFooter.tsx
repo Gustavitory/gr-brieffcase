@@ -1,13 +1,13 @@
 import { SocialFooterItem } from '../../atoms/Footer/SocialFooterItem';
 import React from 'react';
-import {AiOutlineInstagram,AiOutlineTwitter} from 'react-icons/ai';
-import {FaLinkedinIn,FaFacebookF} from 'react-icons/fa';
+import {AiOutlineWhatsApp,AiOutlineGithub} from 'react-icons/ai';
+import {FaLinkedinIn} from 'react-icons/fa';
 
 export const SocialFooter = () => {
     const data=[
-        {color:'--instagram-color',link:'https://www.instagram.com/tavo_ry/?next=%2F',Icon:AiOutlineInstagram},
+        {color:'--whatsapp-color',link:'https://wa.me/584243467694',Icon:AiOutlineWhatsApp},
         {color:'--linkedin-color',link:'https://www.linkedin.com/in/gustavo-riera-fullstackdev/',Icon:FaLinkedinIn},
-        {color:'--facebook-color',link:'https://www.facebook.com/gustavo.gabriel.3538',Icon:FaFacebookF}
+        {color:'--github-color',link:'https://github.com/Gustavitory',Icon:AiOutlineGithub}
     ]
   return (
     <>
