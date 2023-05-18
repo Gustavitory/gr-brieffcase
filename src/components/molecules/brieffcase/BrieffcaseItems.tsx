@@ -21,11 +21,13 @@ export const BrieffcaseItems = ({imagen,title,description,deploy,repo}:brieffcas
   return (
     <>
         <section className='cont' ref={cont}>
-            <Image src={imagen} alt={title} width={width} height={width*.70} />
+            <Image src={imagen} alt={title} width={width} height={width*.70}/>
             <section className='info'>
-                <h3>{title}</h3>
-                <hr />
-                <p>{description}</p>
+                <section>
+                    <h3>{title}</h3>
+                    <hr />
+                    <p>{description}</p>
+                </section>
                 <section className='links'>
                     {deploy&&<a href={deploy} target='__blank' ><FaRocket/></a>}
                     {repo&&<a href={repo} target='__blank' ><FaGithubSquare/></a>}
@@ -44,6 +46,10 @@ export const BrieffcaseItems = ({imagen,title,description,deploy,repo}:brieffcas
             }
             .info{
                 padding:1em 2em;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-between;
+                height:100%;
             }
             p{
                 font-size:.8em;
@@ -52,6 +58,15 @@ export const BrieffcaseItems = ({imagen,title,description,deploy,repo}:brieffcas
                 display:flex;
                 gap:2em;
                 justify-content:flex-end;
+                justify-self:flex-end;
+                font-size:1.3em;
+            }
+            a{
+                transition:.25s;
+            }
+            a:hover{
+                transform:translateY(3px);
+                color:var(--pink);
             }
             hr{
                 border: 1px solid white;

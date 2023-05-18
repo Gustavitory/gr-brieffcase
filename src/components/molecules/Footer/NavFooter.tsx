@@ -29,6 +29,12 @@ export const NavFooter = () => {
                 justify-content:center;
                 z-index:10;
             }
+            @media (max-width:1000px){
+                ul{
+                    gap:1em;
+                    font-size:.8em;
+                }
+            }
         `}</style>
     </>
   )

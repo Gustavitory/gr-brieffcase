@@ -1,9 +1,11 @@
 import { NavFooter } from '../../molecules/Footer/NavFooter'
 import { SocialFooter } from '../../molecules/Footer/SocialFooter'
-import React from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import Image from 'next/image';
+import { useWindowWidth } from '@/components/hooks/useWindowWidth';
 
 const Footer = () => {
+    const {width}=useWindowWidth()
   return (
     <>
         <div>
@@ -11,7 +13,7 @@ const Footer = () => {
             <SocialFooter/>
             <hr />
             <p>Términos de política - Privacidad del servicio</p>
-            <Image src='/Footer/Illustration.png' alt='planet' width={300} height={300}
+            <Image className='planet' src='/Footer/Illustration.png' alt='planet' width={width<1000?150:300} height={width<1000?150:300}
                 style={{
                     position:'absolute',
                     top:0,
@@ -40,6 +42,11 @@ const Footer = () => {
                 boder:1px solid #ffffff50;
                 border-bottom:none;
                 margin-top:1em;
+            }
+            @media (max-width:1000px){
+                .planet{
+                    width:10px;
+                }
             }
         `}</style>
     </>

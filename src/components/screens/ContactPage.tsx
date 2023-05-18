@@ -1,13 +1,15 @@
 import React from 'react'
 import { ContactForm } from '../organisms/Contact/ContactForm'
 import Image from 'next/image';
+import { useWindowWidth } from '../hooks/useWindowWidth';
 
 const ContactPage = () => {
+  const {width}=useWindowWidth()
   return (
     <>
         <div id='Contact'>
             <ContactForm/>
-            <Image src="/Contact/FormaInf.png" alt="Form" width={750} height={800}
+            <Image src="/Contact/FormaInf.png" alt="Form" width={width<1000?425:750} height={width<1000?500:800}
               style={{
                 position:'absolute',
                 bottom:0,

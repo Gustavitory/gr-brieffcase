@@ -48,6 +48,11 @@ export const SideBar = ({config}:SideBarProps) => {
                 top:50%;
                 transform:translateY(-50%);
             }
+            @media (max-width: 1000px){
+                ul{
+                    display:none;
+                }
+            } 
         `}</style>
     </>
   )
