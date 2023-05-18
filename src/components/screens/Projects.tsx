@@ -27,7 +27,7 @@ function Projects() {
     new Tech('/tech/graphql.png','Graphql'),
     new Tech('/tech/sass1.png','Sass'),
     new Tech('/tech/node.png',''),
-    new Tech('/tech/nestJS.svg.png','Nest'),
+    new Tech('/tech/nestJS.png','Nest'),
     new Tech('/tech/express1.png','Express'),
     new Tech('/tech/mysql.svg',''),
     new Tech('/tech/mongo.png',''),
