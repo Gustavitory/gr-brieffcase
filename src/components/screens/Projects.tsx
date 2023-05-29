@@ -32,6 +32,7 @@ function Projects() {
     new Tech('/tech/mysql.svg',''),
     new Tech('/tech/mongo.png',''),
     new Tech('/tech/sequelize.svg','Sequelize'),
+    new Tech('/tech/docker.png','Docker')
   ]
   const experience=[
     {image:"/Trabajos/GradienteLogo.png", title:"Gradiente",linkDeploy:'https://gradiente.ai',description:'FREELANCE - Tuve la oportunidad de trabajar con gradiente durante 10 meses, una startup colombiana que ofrece soluciones legislativas a los interesados, en donde desarrolle el cliente de la aplicación, las tecnologias utilizadas fueron nextjs, Redux y graphql '},
