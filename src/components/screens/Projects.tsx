@@ -73,6 +73,14 @@ function Projects() {
         "Este proyecto lo realice como desafio técnico, el reto consiste en desarrollar un servidor que consumiria una api externa, la cual me enviaria informacion en formato CSV la cual debia ser seteada a formato JSON y posteriormente ser enviada. El cliente fue desarrollado con react, redux y css.",
     },
     {
+      image: "/Trabajos/toDo.gif",
+      title: "To Do App",
+      linkDeploy: "https://todo-app-one-tau-77.vercel.app",
+      linkRepo: "https://github.com/Gustavitory/todo-app",
+      description:
+        "To Do app es un proyecto reciente en donde use mucho del conocimiento y experiencia que habia adquirido hasta el momento, todos los componentes son reutilizables y escalables, el backend usa autenticacion por JWT y validaciones en todo momento mediante middlewares, el front esta diseñado en Reactjs con TypeScript, Redux y CSS",
+    },
+    {
       image: "/Trabajos/harry-potter-ron-weasley.gif",
       title: "Harry Potter App",
       linkDeploy: "https://hp-app.vercel.app/",
@@ -87,14 +95,6 @@ function Projects() {
       linkRepo: "https://github.com/Gustavitory/PokemonChallenge",
       description:
         "Esta App fue desarrollada como uno de mis primeros proyectos, consume la api publica de Pokemon y utilice Javascript, Reactjs, Redux y CSS ",
-    },
-    {
-      image: "/Trabajos/toDo.gif",
-      title: "To Do App",
-      linkDeploy: "https://todo-app-one-tau-77.vercel.app",
-      linkRepo: "https://github.com/Gustavitory/todo-app",
-      description:
-        "To Do app es un proyecto reciente en donde use mucho del conocimiento y experiencia que habia adquirido hasta el momento, todos los componentes son reutilizables y escalables, el backend usa autenticacion por JWT y validaciones en todo momento mediante middlewares, el front esta diseñado en Reactjs con TypeScript, Redux y CSS",
     },
     {
       image: "/Trabajos/this.gif",
