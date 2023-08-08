@@ -103,6 +103,11 @@ function Projects() {
       description:
         "Este portafolios que he realizado con mucho cariño, realizado en Nextjs con typescript.",
     },
+    {
+      image: "/Trabajos/climate.png",
+      title: "ClimateScience informative site",
+      linkDeploy: "https://climate-science-six.vercel.app",
+    },
   ];
   return (
     <>
