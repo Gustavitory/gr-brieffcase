@@ -91,7 +91,7 @@ function Projects() {
     {
       image: "/Trabajos/squirtle-pikachu.gif",
       title: "Pokemon App",
-      linkDeploy: "https://sad-bardeen-717db3.netlify.app/",
+      linkDeploy: "https://poke-five-coral.vercel.app",
       linkRepo: "https://github.com/Gustavitory/PokemonChallenge",
       description:
         "Esta App fue desarrollada como uno de mis primeros proyectos, consume la api publica de Pokemon y utilice Javascript, Reactjs, Redux y CSS ",
@@ -102,6 +102,13 @@ function Projects() {
       linkRepo: "https://github.com/Gustavitory/gr-brieffcase",
       description:
         "Este portafolios que he realizado con mucho cariño, realizado en Nextjs con typescript.",
+    },
+    {
+      image: "/Trabajos/climate.png",
+      title: "ClimateScience informative site",
+      linkDeploy: "https://climate-science-six.vercel.app",
+      description:
+        "Es una web informativa sobre el evento de climate science que se celebra en UK",
     },
   ];
   return (
