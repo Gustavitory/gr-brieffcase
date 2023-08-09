@@ -108,7 +108,7 @@ function Projects() {
       title: "ClimateScience informative site",
       linkDeploy: "https://climate-science-six.vercel.app",
       description:
-        "Es una web informativa sobre el evento de climate science que se celebra en UK",
+        "Es una web informativa sobre el evento de climate science que se celebra en UK, contiene animaciones keyframes y todos los componentes son reutilizables.",
     },
   ];
   return (
